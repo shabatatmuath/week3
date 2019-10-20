@@ -118,7 +118,10 @@ function Bus(title, src) {
       addElement('td', row, bus.title);
       addElement('td', row, '' + bus.voteCtr );
       addElement('td', row, '' + bus.shownCtr);
+      addElement('td', row, bus.title + '  '+ 'had' +'  '+ bus.voteCtr +'  '+'votes'+'  '+ 'and was shown'+'  ' +  bus.shownCtr +'  '+ 'times');
+
     }
+
   }
   
   function addElement(tag, container, text) {
