@@ -115,9 +115,9 @@ function Bus(title, src) {
     for (var i = 0; i < Bus.all.length; i++) {
       var bus = Bus.all[i];
       var row = addElement('tr', tableBody);
-      addElement('td', row, bus.title);
-      addElement('td', row, '' + bus.voteCtr );
-      addElement('td', row, '' + bus.shownCtr);
+      //addElement('td', row, bus.title);
+     // addElement('td', row, '' + bus.voteCtr );
+      //addElement('td', row, '' + bus.shownCtr);
       addElement('td', row, bus.title + '  '+ 'had' +'  '+ bus.voteCtr +'  '+'votes'+'  '+ 'and was shown'+'  ' +  bus.shownCtr +'  '+ 'times');
 
     }
