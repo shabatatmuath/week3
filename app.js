@@ -118,11 +118,21 @@ function Bus(title, src) {
       //addElement('td', row, bus.title);
      // addElement('td', row, '' + bus.voteCtr );
       //addElement('td', row, '' + bus.shownCtr);
-      addElement('td', row, bus.title + '  '+ 'had' +'  '+ bus.voteCtr +'  '+'votes'+'  '+ 'and was shown'+'  ' +  bus.shownCtr +'  '+ 'times');
+      //addElement('td', row, bus.title + '  '+ 'had' +'  '+ bus.voteCtr +'  '+'votes'+'  '+ 'and was shown'+'  ' +  bus.shownCtr +'  '+ 'times');
 
     }
 
   }
+
+  function randersentnece() {
+    var containerSentence = document.getElementById('par');
+    for (let i = 0; i < Bus.all.length; i++) {
+      var bus = Bus.all[i];
+      var sentence = bus.title+ ' had ' + bus.voteCtr + ' votes and was shown ' + bus.shownCtr +' times';
+      addElement('li', containerSentence, sentence);
+    }
+  }
+
   
   function addElement(tag, container, text) {
     var element = document.createElement(tag);
@@ -160,6 +170,7 @@ function Bus(title, src) {
          
             
         alert('No more clicking');
+        randersentnece();
   
         Bus.container.removeEventListener('click', clickHandler);
   
