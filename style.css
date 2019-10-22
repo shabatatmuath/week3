@@ -24,6 +24,7 @@
     border-radius: 25%;
     font-family:  cursive;
     font-style: italic;
+    cursor: pointer;
 
     
   }
@@ -55,4 +56,10 @@
   }
   h1{
     font-family: 'Liu Jian Mao Cao', cursive;
+  }
+  canvas {
+    display: block;
+    height: 352px;
+    width: 500px;
+    float: right;
   }
