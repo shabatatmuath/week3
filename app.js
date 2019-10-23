@@ -184,7 +184,10 @@ function clickHandler(event) {
     if (Bus.roundCtr === Bus.roundLimit) {
 
       alert('No more clicking');
+
       randersentnece();
+              rendercharts();
+
 
       Bus.container.removeEventListener('click', clickHandler);
 
@@ -195,6 +198,42 @@ function clickHandler(event) {
     }
   }
 }
+function  rendercharts() {
+  var BusArray = [];
+  var voteArr = [];
+  var ShownArr = [];
+  for (let i = 0; i < Bus.all.length; i++) {
+    var MallInstent = Bus.all[i];
+    BusArray.push(MallInstent.title + ' Vote');
+    BusArray.push(MallInstent.title + ' Shown');
+    voteArr.push(MallInstent.voteCtr);
+    ShownArr.push(MallInstent.shownCtr);
+  }
+  var ctx = document.getElementById('Chart').getContext('2d');
+  var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['bag', 'banana', 'bathroom', 'boots', 'breakfast', 'bubblegum', 'chair', 'cthulhu', 'dog-duck ',
+        'dragon', 'pen', 'pet-sweep', 'scissors', 'shark', 'sweep', 'tauntaun', 'unicorn', 'usb', 'water-can', 'wine-glass'],
+      datasets: [
+        {
+          label: 'Votes',
+          backgroundColor: 'white',
+          borderColor: 'black',
+          data: voteArr,
+        }
+        ,
+        {
+          label: 'Shown',
+          backgroundColor: 'black',
+          borderColor: 'white',
+          data: ShownArr,
+        }
+      ],
+      options: {}
+    }
+  });
+ }
 
 
 Bus.container.addEventListener('click', clickHandler);
