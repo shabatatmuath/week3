@@ -45,6 +45,9 @@ new Bus('Unicorn', 'images/unicorn.jpg');
 new Bus('Usb', 'images/usb.jpg');
 new Bus('Water-can', 'images/water-can.jpg');
 new Bus('Wine-glass', 'images/wine-glass.jpg');
+
+
+
 function renderNewBuses() {
 
   var forbidden = [Bus.leftObject, Bus.middleObject, Bus.rightObject];
@@ -139,17 +142,21 @@ function addElement(tag, container, text) {
   return element;
 }
 
-
 function getBus() {
   var data = localStorage.getItem('bus');
-  var BusData = JSON.parse(data)
+  var BusData = JSON.parse(data);
+  
+  if (BusData){
   Bus.all = BusData;
+  
+
   renderNewBuses();
+  }
 
 }
 function setBus() {
-  var BusString = JSON.stringify(Bus.all)
-  localStorage.setItem('bus', BusString)
+  var BusString = JSON.stringify(Bus.all);
+  localStorage.setItem('bus', BusString);
 }
 
 
