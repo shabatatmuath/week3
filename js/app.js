@@ -1,8 +1,6 @@
 'use strict';
 
-// Cart constructor.
 var Cart = function(items) {
-  // this.items is an array of CartItem instances.
   this.items = items;
 };
 
@@ -16,7 +14,6 @@ Cart.prototype.saveToLocalStorage = function() {
 };
 
 Cart.prototype.removeItem = function(item) {
-  // In this implementation, the item parameter is the index of the item to be removed.
   this.items.splice(item, 1);
 };
 
@@ -29,7 +26,6 @@ var CartItem = function(product, quantity) {
   this.quantity = quantity;
 };
 
-// Product contructor.
 var Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
@@ -60,5 +56,4 @@ function generateCatalog() {
   new Product('assets/wine-glass.jpg', 'Wine Glass');
 }
 
-// Initialize the app by creating the big list of products with images and names
 generateCatalog();

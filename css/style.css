@@ -2,21 +2,22 @@ body,
 html {
   height: 100%;
   width: 100%;
+  background-color: rgb(88, 0, 0);
 }
 
 body {
-  background-image: linear-gradient( to top right, #fff, #ccc);
+  background-image: linear-gradient( to top right, rgb(255, 255, rgb(255, 255, 255) 0, 0));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: cursive;
 }
 
 /* Specifically Targeting the Main Header (not to be confused with headers within cards) */
 
 body>header {
-  background: #062f4f;
-  border-bottom: 1px solid #ddd;
-  overflow: hidden;
+  background: #000000;
+  border-bottom: 1px solid rgb(134, 0, 0);
+  overflow: scroll ;
   padding: .5em 5em;
 }
 
@@ -28,7 +29,7 @@ body>header:after {
   width: 100%;
   height: 10px;
   z-index: 100;
-  box-shadow: 0 0 10px rgba(0, 0, 0, .8);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
 body>header nav {
@@ -41,13 +42,13 @@ body>header nav li {
 }
 
 body>header nav li a {
-  color: #eee;
-  padding: 0 .5em;
+  color: rgb(255, 255, 255);
+  padding : 1em;
   text-decoration: none;
 }
 
 #itemCount {
-  color: #ccc;
+  color: rgb(255, 255, 255);
   font-size: .75em;
   line-height: 1em;
   margin-left: -.5em;
@@ -56,8 +57,8 @@ body>header nav li a {
 body>header h1 {
   float: left;
   font-size: 2.5em;
-  color: #fff;
-  text-shadow: -1px -1px 1px #666, 1px 1px 1px #000;
+  font-style: italic;
+  color: white;
   opacity: 0.75;
 }
 
@@ -67,24 +68,24 @@ body>header h1 {
 /* Note the height calculation -- that's to keep the footer at the bottom */
 
 main {
-  background: #fff;
-  border: 1px inset #ccc;
+  background: rgb(88, 0, 0);
+  border: 1px inset rgb(0, 0, 0);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   line-height: 1.5em;
   margin: 1.5em 1.5em 2.5em;
   min-height: calc(100% - 9.5em);
   height: auto !important;
-  text-shadow: white -1px 1px;
+  text-shadow: rgb(0, 0, 0) -1px 1px;
+  color: #ffffff;
 }
 
 /* Footer Styling and sticking to the bottom */
 
 footer {
-  background: #eee;
-  border-top: 1px solid #ccc;
-  color: #666;
+  background: #000000;
+  border-top: 1px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: block;
   height: 1.5em;
   padding: .5em 5em;
@@ -113,10 +114,10 @@ footer {
 /* Card styles specific to this application */
 
 .card header {
-  background: #813772;
+  background: #000000;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
-  color: #eee;
+  color: rgb(255, 255, 255);
   opacity: .8;
   padding: .5em;
   text-align: center;
@@ -125,6 +126,7 @@ footer {
 
 .card .copy {
   padding: 1.5em;
+  color: #ffffff;
 }
 
 
@@ -132,6 +134,7 @@ footer {
 
 legend {
   display: none;
+  color: #000000;
 }
 
 form {
@@ -157,6 +160,7 @@ label {
 label span {
   display: block;
   padding-bottom: .25em;
+  color: beige;
 }
 
 .card#cartContents:empty {
@@ -164,9 +168,9 @@ label span {
 }
 
 .card#cartContents {
-  background: #f5f5f5;
+  background: rgb(88, 0, 0);
   padding: 1.5em;
-  box-shadow: 0 3px 2px #777;
+  box-shadow: 0 8px 2px rgb(0, 0, 0);
 }
 
 
@@ -175,21 +179,21 @@ label span {
 #cart {
   border-collapse: collapse;
   margin: auto;
-  width: 65%;
+  width: 50%;
 }
 
 #cart thead tr th {
-  color: #777;
-  border-bottom: 3px solid #062f4f;
+  color: rgb(253, 253, 253);
+  border-bottom: 3px solid rgb(0, 0, 0);
   font-weight: bold;
   padding: .5em 1em;
 }
 
 
 #cart tr td {
-  border-bottom: 1px solid #062f4f;
+  border-bottom: 1px solid #000000;
   border-collapse: none;
-  color: #777;
+  color: rgb(255, 255, 255);
   padding: .5em 1em;
   text-align: center;
   width: auto;
@@ -202,6 +206,6 @@ label span {
 }
 
 #cart tr td:first-child {
-  color: red;
-  cursor: pointer;
+  color: rgb(0, 0, 0);
+  cursor: grab ;
 }
